@@ -154,6 +154,8 @@ public class HueController {
             case PHHueError.AUTHENTICATION_FAILED:
                 errorStr = "AUTHENTICATION_FAILED";
                 break;
+            default:
+                errorStr = "UNKNOWN ERROR";
         }
         return errorStr;
     }
