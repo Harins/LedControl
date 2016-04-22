@@ -35,14 +35,16 @@ public class SetLightColorsActivity extends AppCompatActivity {
         }
         addLightViews(root, states);
 
-        setLightButtonOn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        if (setLightButtonOn != null) {
+            setLightButtonOn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-                Toast.makeText(LedControl.getContext(), "Bridge Connected", Toast.LENGTH_LONG).show();
-                randomLights();
-            }
-        });
+                    Toast.makeText(LedControl.getContext(), "Bridge Connected", Toast.LENGTH_LONG).show();
+                    randomLights();
+                }
+            });
+        }
     }
 
 
@@ -70,5 +72,4 @@ public class SetLightColorsActivity extends AppCompatActivity {
 
         }
     }
-
 }
