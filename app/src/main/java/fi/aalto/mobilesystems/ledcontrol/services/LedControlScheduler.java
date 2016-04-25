@@ -45,6 +45,7 @@ public class LedControlScheduler extends IntentService implements PHSDKListener 
     }
 
     public void onCreate() {
+        Log.i(TAG, TAG + " created");
         this.sdk = PHHueSDK.getInstance();
     }
 
